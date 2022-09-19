@@ -95,8 +95,8 @@ let totalOrder = document.querySelector(".total-order")
 let initialPrice = document.querySelector(".initial-price")
 let quantityTotal = document.querySelector(".quantity-total")
 
-initialPrice.innerHTML = 'R$ ' + (parseFloat(initialPrice.dataset.initialPrice).toFixed(2)).toString().replace(".", ",")
-totalOrder.innerHTML = 'R$ ' +  parseFloat(initialPrice.dataset.initialPrice).toFixed(2).toString().replace(".", ",")
+initialPrice.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(initialPrice.dataset.initialPrice)
+totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(initialPrice.dataset.initialPrice)
 totalOrder.dataset.totalOrder = initialPrice.dataset.initialPrice
 
 
@@ -116,8 +116,8 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
       currentValue.dataset.currentValue = parseInt(currentValue.dataset.currentValue) + 1
       currentValue.innerHTML = currentValue.dataset.currentValue
       input.value = parseInt(input.value) + 1
-      totalOrder.dataset.totalOrder = ((parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value)).toFixed(2)).toString().replace(".", ",")
-      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
+      totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value))
+      totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
     }   
   })
 
@@ -126,8 +126,8 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
       currentValue.dataset.currentValue = parseInt(currentValue.dataset.currentValue) - 1
       currentValue.innerHTML = currentValue.dataset.currentValue
       input.value = parseInt(input.value) - 1
-      totalOrder.dataset.totalOrder = ((parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value)).toFixed(2)).toString().replace(".", ",")
-      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
+      totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value))
+      totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
       }   
     })
   })
@@ -139,16 +139,16 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
 
 function more(el){
   let inputNumber = el.previousSibling.previousSibling
-  totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value)).toFixed(2).toString().replace(".", ",")
-  totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
+  totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value))
+  totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
     inputNumber.value = parseInt(inputNumber.value) + 1
 }
 
 function less(el){
   let inputNumber = el.nextSibling.nextSibling
     if(inputNumber.value > 1){
-      totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value)).toFixed(2).toString().replace(".", ",")
-      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
+      totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value))
+      totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
       inputNumber.value = parseInt(inputNumber.value) - 1
     }
 }
