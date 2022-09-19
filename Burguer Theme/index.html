@@ -323,7 +323,7 @@
                   <span>Allergens: Milk, Eggs, Soy, Glutten</span>
                 </div>
                 <div class="order-price">
-                  <strong>$<span class="initial-price">15.00</span></strong>
+                  <strong data-initial-price="15" class="initial-price"></strong>
                 </div>
                 <div class="order-options">
                   <div class="header-options">
@@ -332,47 +332,20 @@
                       <span>Choose 3 options</span>
                     </div>
                     <div class="right">
-                      <span><i class="current-value">0</i> / <i class="max-value">3</i></span>
+                      <span><span data-current-value="0" class="current-value">0</span>/<span data-max-value="3" class="max-value">3</span></span>
                       <span>Required</span>
                     </div>
                   </div>
                   <div class="option">
-                    <span>onion + R$ <span class="adicional">1.00</span></span>
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
                     <div class="quantity">
                       <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
                       <input type="number" name="" value="0" disabled="true">
                       <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
                     </div>
-                  </div><!---------------Option-->
-                  <div class="option">
-                    <span>onion + R$ <span class="adicional">2.50</span></span>
-                    <div class="quantity">
-                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
-                      <input type="number" name="" value="0" disabled="true">
-                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                  </div><!---------------Option-->                          
+                  </div><!---------------Option-->                         
                 </div><!-----------Order Option-->
-                <div class="order-options">
-                  <div class="header-options">
-                    <div class="left">
-                      <strong>Choose your snacks</strong>
-                      <span>Choose 3 options</span>
-                    </div>
-                    <div class="right">
-                      <span><i class="current-value">0</i> / <i class="max-value">3</i></span>
-                      <span>Required</span>
-                    </div>
-                  </div>
-                  <div class="option">
-                    <span>onion + R$ <span class="adicional">3,00</span></span>
-                    <div class="quantity">
-                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
-                      <input type="number" name="" value="0" disabled="true">
-                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                  </div><!---------------Option-->               
-                </div><!-----------Order Option-->
+        
                 <div class="comentary">
                   <div class="header-comentary">
                     <strong>Any comentary?</strong>
@@ -385,7 +358,7 @@
             </div>
             <div class="modal-submit">
               <div class="order-price">
-                <strong>$<span class="total-order"></span></strong>
+                <strong data-total-order="" class="total-order"></strong>
               </div>
               <div class="quantity">
                 <button class="btn btn-secondary btn-icon" onclick="less(this)"><i class="fa-solid fa-minus"></i></button>

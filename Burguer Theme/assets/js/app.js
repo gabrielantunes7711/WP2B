@@ -84,7 +84,7 @@ const maxLength = textarea.maxLength;
 textarea.addEventListener('input', () =>{
   characters.textContent = textarea.value.length + " / " + maxLength;
   if (textarea.value.length >= maxLength ){
-    characters.style.color = 'red';
+    characters.style.color = 'var(--secondary-color)';
   } else{
     characters.style.color = null;
   }
@@ -95,33 +95,39 @@ let totalOrder = document.querySelector(".total-order")
 let initialPrice = document.querySelector(".initial-price")
 let quantityTotal = document.querySelector(".quantity-total")
 
-totalOrder.innerHTML = initialPrice.innerHTML
+initialPrice.innerHTML = 'R$ ' + (parseFloat(initialPrice.dataset.initialPrice).toFixed(2)).toString().replace(".", ",")
+totalOrder.innerHTML = 'R$ ' +  parseFloat(initialPrice.dataset.initialPrice).toFixed(2).toString().replace(".", ",")
+totalOrder.dataset.totalOrder = initialPrice.dataset.initialPrice
+
 
 document.querySelectorAll('.order-options').forEach((el, i) => {
     const orderElement = el
-    const maxValue = el.querySelector(".max-value").innerHTML
+    const maxValue = el.querySelector(".max-value")
 
   orderElement.querySelectorAll(".option").forEach((el, i) =>{
     const btnLess = el.querySelector(".less-adiconal")
     const btnMore = el.querySelector(".more-adicional")
     let input = el.querySelector("input")
-    const adicionalValue = el.querySelector(".adicional")
+    const adicionalPrice = el.querySelector(".adicional")
+    const currentValue = orderElement.querySelector(".current-value")
 
     btnMore.addEventListener('click', () =>{
-      const currentValue = orderElement.querySelector(".current-value")
-      if (parseInt(currentValue.innerHTML) < maxValue){
-      currentValue.innerHTML = parseInt(currentValue.innerHTML) + 1
+      if (currentValue.dataset.currentValue < maxValue.dataset.maxValue){
+      currentValue.dataset.currentValue = parseInt(currentValue.dataset.currentValue) + 1
+      currentValue.innerHTML = currentValue.dataset.currentValue
       input.value = parseInt(input.value) + 1
-      totalOrder.innerHTML = (parseFloat(totalOrder.innerHTML) + (parseFloat(adicionalValue.innerHTML)) * parseInt(quantityTotal.value)).toFixed(2)   
-      }   
-    })
+      totalOrder.dataset.totalOrder = ((parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value)).toFixed(2)).toString().replace(".", ",")
+      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
+    }   
+  })
 
     btnLess.addEventListener('click', () =>{
-      const currentValue = orderElement.querySelector(".current-value")
-      if (parseInt(currentValue.innerHTML) > 0 && input.value > 0){
-      currentValue.innerHTML = parseInt(currentValue.innerHTML) - 1
+      if (currentValue.dataset.currentValue > 0 && input.value > 0){
+      currentValue.dataset.currentValue = parseInt(currentValue.dataset.currentValue) - 1
+      currentValue.innerHTML = currentValue.dataset.currentValue
       input.value = parseInt(input.value) - 1
-      totalOrder.innerHTML = (parseFloat(totalOrder.innerHTML) - (parseFloat(adicionalValue.innerHTML)) * parseInt(quantityTotal.value)).toFixed(2) 
+      totalOrder.dataset.totalOrder = ((parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value)).toFixed(2)).toString().replace(".", ",")
+      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
       }   
     })
   })
@@ -133,15 +139,18 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
 
 function more(el){
   let inputNumber = el.previousSibling.previousSibling
-    totalOrder.innerHTML = (parseFloat(totalOrder.innerHTML) + (parseFloat(totalOrder.innerHTML) / inputNumber.value)).toFixed(2)
+  totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value)).toFixed(2).toString().replace(".", ",")
+  totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
     inputNumber.value = parseInt(inputNumber.value) + 1
 }
 
 function less(el){
   let inputNumber = el.nextSibling.nextSibling
     if(inputNumber.value > 1){
-      totalOrder.innerHTML = (parseFloat(totalOrder.innerHTML) - (parseFloat(totalOrder.innerHTML) / inputNumber.value)).toFixed(2)
+      totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(totalOrder.dataset.totalOrder) / inputNumber.value)).toFixed(2).toString().replace(".", ",")
+      totalOrder.innerHTML = 'R$ ' +  totalOrder.dataset.totalOrder
       inputNumber.value = parseInt(inputNumber.value) - 1
     }
 }
+
 
