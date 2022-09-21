@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Burger Theme</title>
+
+    <link rel="dns-prefetch" href="//kit.fontawesome.com" />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/theme.css" type="text/css" />
+  </head>
+
+  <body class="home blog">
+    <!------- Main Slider-->
+    <section class="main-slider">
+      <div class="owl-slide owl-carousel owl-theme">
+        <div class="item">
+          <figure><img src="assets/img/burguer.jpg" /></figure>
+        </div>
+        <div class="item">
+          <figure><img src="assets/img/burguer2.jpeg" /></figure>
+        </div>
+        <div class="item">
+          <figure><img src="assets/img/burguer3.jpg" /></figure>
+        </div>
+        <div class="item">
+          <figure><img src="assets/img/fries.jpg" /></figure>
+        </div>
+        <div class="item">
+          <figure><img src="assets/img/soda.jpg" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!------- Main-Nav-->
+    <nav class="main-nav">
+      <ul>
+        <li>
+          <a href="#"><i class="fa-solid fa-pizza-slice"></i>Pizza</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-burger"></i>Burgers</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-bread-slice"></i>Sandwiches</a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-mortar-pestle"></i>sides & Salads</a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-burger"></i>Combos</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-martini-glass-empty"></i>Drinks</a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-cookie"></i>Desserts</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="py-xl bg-light">
+      <div class="container">
+        <div class="offers">
+          <div class="offer">
+            <div class="left">
+              <strong>Save 30%</strong>
+              <h2>BURG'R COMBO</h2>
+              <p>Sides and drinks at a slashed price</p>
+            </div>
+            <div class="right">
+              <img src="assets/img/offer1.png" alt="" />
+            </div>
+            <a href="#" class="btn btn-secondary" onclick="openModal(event)">Adicionar pedido</a>
+          </div>
+          <div class="offer">
+            <div class="left">
+              <strong>Crispy</strong>
+              <h2>CHIK'N COMBO</h2>
+              <p>Sides and drinks at a slashed price</p>
+            </div>
+            <div class="right">
+              <img src="assets/img/offer1.png" alt="" />
+            </div>
+            <a href="#" class="btn btn-secondary">Adicionar pedido</a>
+          </div>
+          <div class="offer">
+            <div class="left">
+              <strong>HALF & HALF</strong>
+              <h2>YUMMI PIZZA</h2>
+              <p>Sides and drinks at a slashed price</p>
+            </div>
+            <div class="right">
+              <img src="assets/img/offer1.png" alt="" />
+            </div>
+            <a href="#" class="btn btn-secondary">Adicionar pedido</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------Menu-->
+    <section class="py-xl">
+      <div class="container">
+        <div class="menu">
+          <h2>CHAR-GRILLED BURGERS</h2>
+          <p>
+            Hand-crafted fresh to order. Smashed to lock in flavor on a toasted
+            brioche bun. Served with garlic dill pickles & fries.
+          </p>
+          <div class="menu-list">
+            <article class="card-menu">
+              <span class="price"><del>$15.99</del> $11.99</span>
+              <figure>
+                <img src="assets/img/card1.jpg" alt="" />
+              </figure>
+              <h2>Bacon Cheeseburger</h2>
+              <p>
+                Smoked brisket, tender ribs, smoked sausage, bacon & cheddar
+                with lettuce, tomato, house BBQ & ranch.
+              </p>
+              <a href="#" class="btn">Adicionar pedido</a>
+            </article>
+            <article class="card-menu">
+              <span class="price">$11.99</span>
+              <figure>
+                <img src="assets/img/card1.jpg" alt="" />
+              </figure>
+              <h2>Bacon Cheeseburger</h2>
+              <p>
+                Smoked brisket, tender ribs, smoked sausage, bacon & cheddar
+                with lettuce, tomato, house BBQ & ranch.
+              </p>
+              <a href="#" class="btn">Adicionar pedido</a>
+            </article>
+            <article class="card-menu">
+              <span class="price">$11.99</span>
+              <figure>
+                <img src="assets/img/card1.jpg" alt="" />
+              </figure>
+              <h2>Bacon Cheeseburger</h2>
+              <p>
+                Smoked brisket, tender ribs, smoked sausage, bacon & cheddar
+                with lettuce, tomato, house BBQ & ranch.
+              </p>
+              <a href="#" class="btn">Adicionar pedido</a>
+            </article>
+            <article class="card-menu">
+              <span class="price">$11.99</span>
+              <figure>
+                <img src="assets/img/card1.jpg" alt="" />
+              </figure>
+              <h2>Bacon Cheeseburger</h2>
+              <p>
+                Smoked brisket, tender ribs, smoked sausage, bacon & cheddar
+                with lettuce, tomato, house BBQ & ranch.
+              </p>
+              <a href="#" class="btn">Adicionar pedido</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------CTA-->
+    <section class="bg-light py-xl">
+      <div class="container">
+        <div class="cta">
+          <figure>
+            <img src="assets/img/imagecta.png" alt="" />
+          </figure>
+          <div class="right">
+            <h2>Fast & Free Home Delivery</h2>
+            <p>
+              I am text block. Click edit button to change this text. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+              luctus nec ullamcorper mattis.
+            </p>
+            <a href="#" class="btn btn-primary btn-large">Pedir por delivery</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------differentials-->
+    <section class="py-xl">
+      <div class="container">
+        <div class="differentials">
+          <div class="differential">
+            <i class="fa-solid fa-user-large"></i>
+            <strong>Friendly Service</strong>
+            <p>Filet mignon buffalo shankle leberkas, porchetta frankfurter.</p>
+          </div>
+          <div class="differential">
+            <i class="fa-solid fa-book-open"></i>
+            <strong>Original Recipes</strong>
+            <p>Filet mignon buffalo shankle leberkas, porchetta frankfurter.</p>
+          </div>
+          <div class="differential">
+            <i class="fa-solid fa-square-parking"></i>
+            <strong>Free Parking Lot</strong>
+            <p>Filet mignon buffalo shankle leberkas, porchetta frankfurter.</p>
+          </div>
+          <div class="differential">
+            <i class="fa-solid fa-person-biking"></i>
+            <strong>Fast Dlivery</strong>
+            <p>Filet mignon buffalo shankle leberkas, porchetta frankfurter.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------Subscribe-->
+    <section class="py-xl bg-primary">
+      <div class="container">
+        <div class="subscribe">
+          <span class="subscribe-icon">
+            <img src="assets/img/food.png"></img >
+          </span>
+          <h2>Love Burgers? Like Deals?</h2>
+          <p>Be the first to know about our newest menu items and latest offers.</p>
+        </div>
+        <form class="newsletter" action="#" method="get">
+          <input type="email" required placeholder="Your e-mail"/>
+          <button class="btn btn-large btn-secondary" type="submit">subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-------Modal-->
+    <section class="modal hide">
+      <div class="body-modal">
+        <a href="#" class="btn btn-secondary btn-icon close" onclick="closeModal(event)"><i class="fa-solid fa-xmark"></i></a>
+          <div class="modal-order">
+            <div class="modal-cols">
+              <div class="left">
+                <figure>
+                  <img src="assets/img/card1.jpg" alt="">
+                </figure>
+              </div>
+              <div class="right">
+                <h2>Jalapeno Angus Burger</h2>
+                <p>Smoked brisket, tender ribs, smoked sausage, bacon & cheddar with lettuce, tomato, house BBQ & ranch.</p>
+                <div class="size">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <p>Serving size: <span>290g</span></p>
+                </div>
+                <div class="nutritions">
+                  <div class="nutrition">
+                    <div class="nutrition-info">
+                      <strong>ENERGY</strong>
+                      <span>430 Cal</span>
+                    </div>
+                    <div class="nutrition-info">
+                      <strong>DI*</strong>
+                      <span>22%</span>
+                    </div>
+                  </div>
+                  <div class="nutrition">
+                    <div class="nutrition-info">
+                      <strong>PROTEIN</strong>
+                      <span>29 g</span>
+                    </div>
+                    <div class="nutrition-info">
+                      <strong>DI*</strong>
+                      <span>58%</span>
+                    </div>
+                  </div>
+                  <div class="nutrition">
+                    <div class="nutrition-info">
+                      <strong>FAT</strong>
+                      <span>12 g</span>
+                    </div>
+                    <div class="nutrition-info">
+                      <strong>DI*</strong>
+                      <span>15%</span>
+                    </div>
+                  </div>
+                  <div class="nutrition">
+                    <div class="nutrition-info">
+                      <strong>SAT FAT</strong>
+                      <span>2 g</span>
+                    </div>
+                    <div class="nutrition-info">
+                      <strong>DI*</strong>
+                      <span>15%</span>
+                    </div>
+                  </div>
+                  <div class="nutrition">
+                    <div class="nutrition-info">
+                      <strong>CARBS</strong>
+                      <span>13 g</span>
+                    </div>
+                    <div class="nutrition-info">
+                      <strong>DI*</strong>
+                      <span>5%</span>
+                    </div>
+                  </div>
+                  <p>*DI: Recommended Daily Intake based on 2000 calories diet</p>
+                </div>
+                <div class="nutrition-alert">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                  <span>Allergens: Milk, Eggs, Soy, Glutten</span>
+                </div>
+                <div class="order-price">
+                  <strong data-initial-price="15" class="initial-price"></strong>
+                </div>
+                <div class="order-options">
+                  <div class="header-options">
+                    <div class="left">
+                      <strong>Choose your snacks</strong>
+                      <span>Choose 3 options</span>
+                    </div>
+                    <div class="right">
+                      <span><span data-current-value="0" class="current-value">0</span>/<span data-max-value="3" class="max-value">3</span></span>
+                      <span class="required" data-required="false">Opcional</span>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
+                    <div class="quantity">
+                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" name="" value="0" disabled="true">
+                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div><!---------------Option-->                         
+                </div><!-----------Order Option-->
+                <div class="order-options">
+                  <div class="header-options">
+                    <div class="left">
+                      <strong>Choose your snacks</strong>
+                      <span>Choose 3 options</span>
+                    </div>
+                    <div class="right">
+                      <span><span data-current-value="0" class="current-value">0</span>/<span data-max-value="3" class="max-value">3</span></span>
+                      <span class="required" data-required="true">Required</span>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
+                    <div class="quantity">
+                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" name="" value="0" disabled="true">
+                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div><!---------------Option-->  
+                  <div class="option">
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
+                    <div class="quantity">
+                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" name="" value="0" disabled="true">
+                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div><!---------------Option-->                        
+                </div><!-----------Order Option-->
+
+                <div class="order-options">
+                  <div class="header-options">
+                    <div class="left">
+                      <strong>Choose your snacks</strong>
+                      <span>Choose 3 options</span>
+                    </div>
+                    <div class="right">
+                      <span><span data-current-value="0" class="current-value">0</span>/<span data-max-value="3" class="max-value">3</span></span>
+                      <span class="required" data-required="true">Required</span>
+                    </div>
+                  </div>
+                  <div class="option">
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
+                    <div class="quantity">
+                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" name="" value="0" disabled="true">
+                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div><!---------------Option-->  
+                  <div class="option">
+                    <span>onion + R$ <span data-adicional-price="1" class="adicional">1.00</span></span>
+                    <div class="quantity">
+                      <button class="btn btn-secondary btn-icon less-adiconal"><i class="fa-solid fa-minus"></i></button>
+                      <input type="number" name="" value="0" disabled="true">
+                      <button class="btn btn-secondary btn-icon more-adicional"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                  </div><!---------------Option-->                        
+                </div><!-----------Order Option-->
+                
+        
+                <div class="comentary">
+                  <div class="header-comentary">
+                    <strong>Any comentary?</strong>
+                    <span id="current-characters">0 / 140</span>
+                  </div>
+                  <textarea id="observation" maxlength="140"></textarea>
+                </div>
+              </div><!--Right-->
+              
+            </div>
+            <div class="modal-submit">
+              <div class="order-price">
+                <strong data-total-order="" class="total-order"></strong>
+              </div>
+              <div class="quantity">
+                <button class="btn btn-secondary btn-icon" onclick="less(this)"><i class="fa-solid fa-minus"></i></button>
+                <input type="number" name="1" value="1" disabled="true" class="quantity-total">
+                <button class="btn btn-secondary btn-icon" onclick="more(this)"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <button class="btn btn-secondary btn-large">Submit</button>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/255f2aff0b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

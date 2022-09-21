@@ -1,0 +1,83 @@
+/* ------- Root */
+:root {
+  --font-primary: ;
+
+  --border-color: ;
+  --border-radius: ;
+  --border: ;
+
+  --primary-text-color: ;
+  --secondary-text-color: ;
+
+  --secondary-color: ;
+
+  --primary-color: ;
+  --background-white: ;
+  --background-light: ;
+  --background-info: ;
+  --tag-color: ;
+
+  --transition: all ease 300ms;
+
+  font-size: 62.5%; /* 1rem = 10px */
+}
+/* ------- General */
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  color: var(--primary-text-color);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+section {
+  position: relative;
+}
+
+/*------- Buttons */
+.btn {
+  
+}
+.btn:hover {
+  
+}
+.btn.btn-primary {
+  
+}
+.btn.btn-primary:hover {
+  
+}
+.btn.btn-secondary {
+ 
+}
+.btn.btn-secondary:hover {
+  
+}
+.btn-large {
+ 
+}
+
+.btn[disabled="disabled"]{
+  
+}
+.btn[disabled="disabled"]:hover{
+  
+}
+
+/*------- Helpers */
+.py-xl {
+  padding-block: 8rem;
+}
+.bg-light {
+  background-color: var(--background-light);
+}
+.bg-primary {
+  background-color: var(--primary-color);
+}
+

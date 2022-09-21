@@ -36,45 +36,6 @@ function anableBodyScroll() {
   body.classList.remove("disable-body-scroll");
 }
 
-function increment(el) {
-  const input = el.previousElementSibling;
-  const maxValue = parseInt(
-    el
-      .closest(".quantity")
-      .closest(".option")
-      .previousElementSibling.querySelector(".max-value").innerHTML
-  );
-  const currentValue = el
-    .closest(".quantity")
-    .closest(".option")
-    .previousElementSibling.querySelector(".current-value");
-  let calc = parseInt(input.value);
-  calc += 1;
-
-  if (calc <= maxValue) {
-    input.value = calc;
-    currentValue.innerHTML = calc;
-  }
-}
-
-function decrement(el) {
-  const maxValue = 
-    el
-      
-  ;
-  const currentValue = el
-    .closest(".quantity")
-    .closest(".option")
-    .previousElementSibling.querySelector(".current-value");
-  const input = el.nextElementSibling;
-  let calc = parseInt(input.value);
-  calc -= 1;
-
-  if (calc >= 0) {
-    input.value = calc;
-    currentValue.innerHTML = calc;
-  }
-}
 
 //-------------------------Comentary
 const textarea = document.querySelector("#observation");
@@ -94,6 +55,7 @@ textarea.addEventListener('input', () =>{
 let totalOrder = document.querySelector(".total-order")
 let initialPrice = document.querySelector(".initial-price")
 let quantityTotal = document.querySelector(".quantity-total")
+const btnSubmit = document.querySelector('.modal-submit').lastElementChild
 
 initialPrice.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(initialPrice.dataset.initialPrice)
 totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(initialPrice.dataset.initialPrice)
@@ -118,7 +80,7 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
       input.value = parseInt(input.value) + 1
       totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) + (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value))
       totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
-    }   
+    }
   })
 
     btnLess.addEventListener('click', () =>{
@@ -128,7 +90,7 @@ document.querySelectorAll('.order-options').forEach((el, i) => {
       input.value = parseInt(input.value) - 1
       totalOrder.dataset.totalOrder = (parseFloat(totalOrder.dataset.totalOrder) - (parseFloat(adicionalPrice.dataset.adicionalPrice)) * parseInt(quantityTotal.value))
       totalOrder.innerHTML = Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalOrder.dataset.totalOrder)
-      }   
+      }
     })
   })
 })
@@ -152,5 +114,4 @@ function less(el){
       inputNumber.value = parseInt(inputNumber.value) - 1
     }
 }
-
 
